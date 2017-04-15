@@ -3,9 +3,9 @@
 ## USE
 
 ```javascript
-const json-2-css = require('json-2-css')
+const jsonToCss = require('json-2-css')
 
-json-2-css(inputfile.json,outputfile.css)
+jsonToCss(inputfile.json,outputfile.css)
 ```
 
 ## JSON format
@@ -27,4 +27,7 @@ The .json file has to be in this format for this to work :
 ```
 
 > Trailing commas cause an error, be sure to remove them
- 
+
+> do not initialise as const json-2-css = require('json-2-css')
+> it is recomended to be initialized as const jsonToCss = require('json-2-css')
+

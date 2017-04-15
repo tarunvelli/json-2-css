@@ -1,6 +1,6 @@
 {
   "name": "json-2-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "converts JSON to CSS",
   "main": "index.js",
   "keywords": [
