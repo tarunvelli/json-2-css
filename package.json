@@ -1,0 +1,21 @@
+{
+  "name": "json-2-css",
+  "version": "1.0.0",
+  "description": "converts JSON to CSS",
+  "main": "index.js",
+  "keywords": [
+    "JSON",
+    "CSS"
+  ],
+  "author": "Tarun Velli",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tarunvelli/json-2-css.git"
+  },
+  "files":[
+    "index.js",
+    "package.json",
+    "README.md"
+  ]
+}
