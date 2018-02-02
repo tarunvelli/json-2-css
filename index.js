@@ -1,19 +1,11 @@
-'use strict';
-
 const fs = require('fs')
 
-module.exports = function (input,output) {
-  input = fs.readFileSync(input) 
-  input = JSON.parse(input)
+module.exports = function (input, output) {
+  input = JSON.parse(fs.readFileSync(input))
 
-  var data=""
-  for( var selecter in input) {
-    data+="\n"+selecter
-    data+=" {"
-    for ( var property in input[selecter]) {
-      data+="\n"+property+":"+input[selecter][property]+";"
-    }
-    data+="\n"+"}"
-  }
-  fs.writeFileSync(output,data)
+  var data = Object.entries(input).reduce((acc1, cur1) => {
+    return `${acc1}\n\n${cur1[0]} ` + Object.keys(cur1[1]).reduce((acc2, cur2) => `${acc2}\n\t${cur2}: ${cur1[1][cur2]};`, '{') + '\n}'
+  }, '')
+
+  fs.writeFileSync(output, data)
 }
